@@ -13,7 +13,7 @@ Improve your aim and gain a competitive advantage with a permanant colored cross
 
 # Quick Start
 
-### [Download OneShot for Windows](https://github.com/5R33CH4/OneShot/releases/latest/download/OneShot.zip)
+### [Download OneShot for Windows](https://github.com/5R33CH4/OneShot/releases/latest/download/OneShot.exe)
 ##### [View all dowloads for any OS](https://github.com/5R33CH4/OneShot/releases/latest)
 
 - Choose a crosshair from over 50 sights
