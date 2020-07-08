@@ -14,7 +14,6 @@ Improve your aim and gain a competitive advantage with a permanant colored cross
 # Quick Start
 
 ### [Download OneShot for Windows](https://github.com/5R33CH4/OneShot/releases/latest/download/OneShot.exe)
-##### [View all dowloads for any OS](https://github.com/5R33CH4/OneShot/releases/latest)
 
 - Choose a crosshair from over 50 sights
 - Click and drag the grip icon to move OneShot around
@@ -48,7 +47,7 @@ Other crosshair programs offer a single style or color option, and often don't a
 
 ## Install
 
-*macOS 10.10+, Linux, and Windows 7+ are supported.*
+*Windows 7+ are supported.*
 
 #### Download the latest version of OneShot from the [releases page](https://github.com/5R33CH4/OneShot/releases/latest)
 
@@ -57,16 +56,6 @@ Other crosshair programs offer a single style or color option, and often don't a
 [**Download**](https://github.com/user/repo/releases/latest/download/OneShot.exe
 ) the `.exe` file. _**(OneShot-Setup-x.x.x.exe)**_
 
-**macOS**
-
-[**Download**](https://github.com/user/repo/releases/latest
-) the `.dmg` file. _**(OneShot-x.x.x.dmg)**_
-
-**Linux**
-
-[**Download**](https://github.com/user/repo/releases/latest) the `.AppImage` or `.deb` file.
-
-*The AppImage needs to be [made executable](http://discourse.appimage.org/t/how-to-make-an-appimage-executable/80) after download.*
 
 
 ##### _Because this app is Free and Open-Source, we cannot afford to sign our code. This means Chrome may warn about an untrusted download, this is normal. Click the arrow icon -> `Keep` to finish downloading. Windows Defender and Mac Gatekeeper will prevent you from running the app the first time._
@@ -78,14 +67,8 @@ Other crosshair programs offer a single style or color option, and often don't a
 - Click `More Info`
 - Click `Run Anyway`
 
-###### Mac
 
-> "OneShot" cannot be opened because the developer cannot be verified.
-
-- Locate the `OneShot` app
-- Hold Control while you click the app icon, then choose Open from the shortcut menu
-
-###### _Further instructions for [Windows](https://www.techjunkie.com/windows-protected-your-pc-disable-smartscreen/) and [Mac](https://support.apple.com/en-us/HT202491)_
+###### _Further instructions for [Windows](https://www.techjunkie.com/windows-protected-your-pc-disable-smartscreen/)
 
 ---
 
@@ -158,7 +141,7 @@ Then edit the automatically created GitHub Releases draft and publish.
 
 #### Hidden by fullscreen apps
 
-Currently OneShot only works with windowed applications, use `Windowed Fullscreen` mode if your game or application supports it. _Windows_ - [https://github.com/5R33CH4/OneShot/issues/1]
+Currently OneShot only works with windowed applications, use `Windowed Fullscreen` mode if your game or application supports it. 
 
 #### Sight is deformed or off by 1 pixel
 
