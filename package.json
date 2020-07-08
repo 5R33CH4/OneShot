@@ -1,0 +1,150 @@
+{
+	"name": "OneShot",
+	"productName": "OneShot",
+	"version": "0.3.12",
+	"description": "🎯 A Crosshair Overlay for any screen",
+	"license": "MIT",
+	"repository": "OneShot/OneShot",
+	"homepage": "https://github.com/5R33CH4/OneShot",
+	"author": {
+		"name": "Lacy Morrow",
+		"email": "me@OneShot.com",
+		"url": "https://OneShot.com"
+	},
+	"bugs": {
+		"url": "https://github.com/5R33CH4/OneShot/issues"
+	},
+	"engines": {
+		"node": ">=10 <=14"
+	},
+	"scripts": {
+		"postinstall": "electron-builder install-app-deps",
+		"lint": "xo --fix",
+		"test": "npm run lint && ava -v",
+		"sh:copyexe": "cp dist/OneShot-Setup-*.exe dist/OneShot.exe",
+		"sh:replacespaces": "find dist/ -name 'OneShot*' -maxdepth 1 -exec bash -c ' mv \"$0\" \"${0// /-}\" ' {} \\;",
+		"start": "sass src/index.scss:src/index.css -s compressed && electron .",
+		"pack": "rm -f *.tgz && electron-builder --dir",
+		"build": "rm -rf dist && electron-builder --macos --linux --win && npm run sh:replacespaces && npm run sh:copyexe",
+		"release": "np"
+	},
+	"dependencies": {
+		"@simonwep/pickr": "^1.6.0",
+		"electron-context-menu": "^2.0.1",
+		"electron-debug": "^3.0.1",
+		"electron-store": "^5.1.1",
+		"electron-unhandled": "^3.0.2",
+		"electron-updater": "^4.3.1",
+		"electron-util": "^0.14.1"
+	},
+	"devDependencies": {
+		"ava": "^3.8.2",
+		"electron": "^6.1.9",
+		"electron-builder": "^22.6.1",
+		"electron-builder-squirrel-windows": "^22.6.1",
+		"electron-reloader": "^1.0.1",
+		"husky": "^4.2.5",
+		"np": "^6.2.3",
+		"sass": "^1.26.5",
+		"spectron": "^8.0.0",
+		"xo": "^0.30.0"
+	},
+	"xo": {
+		"envs": [
+			"node",
+			"browser"
+		],
+		"rules": {
+			"array-bracket-spacing": [
+				"error",
+				"always"
+			],
+			"padded-blocks": [
+				"error",
+				{
+					"blocks": "always",
+					"switches": "always",
+					"classes": "always"
+				}
+			],
+			"padding-line-between-statements": [
+				"error",
+				{
+					"blankLine": "always",
+					"prev": "multiline-block-like",
+					"next": "*"
+				},
+				{
+					"blankLine": "always",
+					"prev": "*",
+					"next": "return"
+				}
+			],
+			"object-curly-spacing": [
+				"error",
+				"always"
+			],
+			"space-in-parens": [
+				"error",
+				"always"
+			]
+		},
+		"semicolon": false
+	},
+	"np": {
+		"publish": false,
+		"releaseDraft": false
+	},
+	"build": {
+		"appId": "com.OneShot.OneShot",
+		"productName": "OneShot",
+		"copyright": "Copyright © 5R33CH4 (Sreecharan S.)",
+		"publish": "github",
+		"mac": {
+			"category": "public.app-category.utilities",
+			"darkModeSupport": true
+		},
+		"dmg": {
+			"iconSize": 160,
+			"contents": [
+				{
+					"x": 180,
+					"y": 170
+				},
+				{
+					"x": 480,
+					"y": 170,
+					"type": "link",
+					"path": "/Applications"
+				}
+			]
+		},
+		"linux": {
+			"target": [
+				"AppImage",
+				"deb"
+			],
+			"category": "Game;Shooter"
+		},
+		"snap": {
+			"plugs": [
+				"default",
+				"camera",
+				"removable-media"
+			]
+		},
+		"win": {
+			"target": [
+				"nsis",
+				"portable"
+			],
+			"publish": "github",
+			"verifyUpdateCodeSignature": false
+		}
+	},
+	"husky": {
+		"hooks": {
+			"pre-push": "npm test"
+		}
+	}
+}

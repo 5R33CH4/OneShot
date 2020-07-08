@@ -1,0 +1,34 @@
+matrix:
+  fast_finish: true
+
+platform:
+  - x86
+  - x64
+
+build: off
+
+os: unstable
+
+branches:
+  only:
+    - master
+    - release
+
+skip_tags: true
+
+environment:
+  nodejs_version: "12"
+
+cache:
+  - node_modules -> package.json
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm install
+
+test_script:
+  - cmd: node --version
+  - cmd: npm --version
+  - cmd: npm test
+#  - cmd: if %platform%==x64 npx electron-builder --windows
+
